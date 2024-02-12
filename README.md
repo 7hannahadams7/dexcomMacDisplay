@@ -16,7 +16,7 @@ After installation and finding the path, open a terminal and run the following c
 python3 --version
 ```
 
-## Find the Path to Python 3
+### Find the Path to Python 3
 To configure the project, you'll need to know the path to Python 3 on your machine. Here's how you can find it:
 
 - **Windows:**
@@ -30,17 +30,18 @@ To configure the project, you'll need to know the path to Python 3 on your machi
 ## File Path Configuration
 Now with the location of your Python executable, the project needs access to your file paths.
 
-1. Open `PythonConfigTemplate.swift`.
-2. Replace the placeholder paths with the actual paths on your system.
+- Open `PythonConfigTemplate.swift`.
+- Replace the placeholder paths with the actual paths on your system.
   - Change the variable `pythonPath` to the path you found above to you Python executable. The full path should end with `/python3`.
   - Change the variable `projectPath` to the location of this project file (ex. `/Users/User1/Downloads/`)
-3. Save the file as `PythonConfig.swift`.
+- Save the file as `PythonConfig.swift`.
 
 ## Pydexcom Install and Setup
 This project uses the pydexcom API to pull your dexcom readings. 
 
 Follow along with the creator's steps to install pydexcom on your machine and setup your Dexcom account for sharing. 
 >> https://github.com/gagebenne/pydexcom
+
 Most importantly, follow the first two steps to get pydexcom installed and your Dexcom sharing configured. 
 1. Download the Dexcom G6 / G5 / G4 mobile app and enable the Share service.
   The Dexcom Share service requires setup of at least one follower to enable the share service, but pydexcom will use your credentials, not the follower's
