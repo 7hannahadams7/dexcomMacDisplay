@@ -3,5 +3,8 @@
 build/
 DerivedData/
 
-# Credentials
-credentials.json
+# Ignore configuration file
+Config.swift
+
+# Ignore Python configuration file
+dexcomMacDisplay/PythonConfig.swift

@@ -15,8 +15,8 @@ class GlucoseModel: ObservableObject {
 
     func fetchGlucoseData() {
         let process = Process()
-        process.launchPath = "/Users/Hannah/miniconda3/bin/python3"
-        process.arguments = ["/Users/Hannah/dexcomMacDisplay/dexcomMacDisplay/dexcom_fetch.py"]
+        process.launchPath = PythonConfig.pythonPath
+        process.arguments = [PythonConfig.pythonScriptPath]
 
         let pipe = Pipe()
         process.standardOutput = pipe
