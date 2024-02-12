@@ -50,23 +50,31 @@ struct ContentView: View {
         
         GeometryReader{geometry in
             VStack {
-                // Main Text
-                HStack {
-                    Text("\(glucoseValue) mg/dL")
-                        .font(.title)
-                    Text(trendArrow)
-                        .font(.title)
-                }
-                .padding()
-                
-                if geometry.size.width > 200 && geometry.size.height > 200 {
-                    
-                    GlucoseChartView(glucoseModel: glucoseModel, highAlert: $highAlert, lowAlert: $lowAlert, fullSize: true)
-                    
-                    Button("Refresh") {
-                        glucoseModel.fetchGlucoseData()
+                if glucoseModel.validLogin{
+                    // Main Text
+                    HStack {
+                        Text("\(glucoseValue) mg/dL")
+                            .font(.title)
+                        Text(trendArrow)
+                            .font(.title)
                     }
                     .padding()
+                    
+                    
+                    if geometry.size.width > 200 && geometry.size.height > 200 {
+                        
+                        GlucoseChartView(glucoseModel: glucoseModel, highAlert: $highAlert, lowAlert: $lowAlert, fullSize: true)
+                        
+                        Button("Refresh") {
+                            glucoseModel.fetchGlucoseData()
+                        }
+                        .padding()
+                    }
+                }else{
+                    VStack{
+                        Text("Invalid Inputs").bold()
+                        Text("Check credentials.json and PythonConfig.swift inputs")
+                    }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

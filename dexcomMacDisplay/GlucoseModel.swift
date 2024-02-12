@@ -12,6 +12,8 @@ class GlucoseModel: ObservableObject {
     @Published var trendArrow: String = ""
     @Published var glucoseReadings: [Int] = []
     @Published var timeLabels: [Date] = []
+    
+    @Published var validLogin: Bool = true
 
     func fetchGlucoseData() {
         let process = Process()
@@ -26,13 +28,13 @@ class GlucoseModel: ObservableObject {
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         if let output = String(data: data, encoding: .utf8) {
-            print("PYTHON OUTPUT: ", output)
             let components = output.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: " ")
             if components.count >= 2, let glucoseValue = Int(components[0]) {
                 self.glucoseValue = glucoseValue
                 self.trendArrow = components[1]
             } else {
                 print("Invalid output format for current values from Python script.")
+                validLogin = false
                 self.glucoseValue = 0
                 self.trendArrow = ""
             }
