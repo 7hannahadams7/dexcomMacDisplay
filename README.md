@@ -55,4 +55,5 @@ To use this project, you'll need to set up your own Dexcom credentials. Follow t
 2. Replace the placeholders with your Dexcom username and password.
 3. Save the file as `credentials.json`.
 4. Now you're ready to run the project with your own credentials.
-NOTE: These credentials must be YOUR DEXCOM ACCOUNT credentials, not a follower of the account. See the pydexcom documentation for more information.
+
+**NOTE:** These credentials must be YOUR DEXCOM ACCOUNT credentials, not a follower of the account. See the pydexcom documentation for more information.
