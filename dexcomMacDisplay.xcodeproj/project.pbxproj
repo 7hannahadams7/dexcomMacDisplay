@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB0026D72B76F6930087C2B7 /* GlucoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0026D62B76F6930087C2B7 /* GlucoseModel.swift */; };
+		BBBDD9FF2B767C5100C2E59D /* dexcomMacDisplayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBDD9FE2B767C5100C2E59D /* dexcomMacDisplayApp.swift */; };
+		BBBDDA012B767C5100C2E59D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBDDA002B767C5100C2E59D /* ContentView.swift */; };
+		BBBDDA032B767C5300C2E59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBBDDA022B767C5300C2E59D /* Assets.xcassets */; };
+		BBBDDA062B767C5300C2E59D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBBDDA052B767C5300C2E59D /* Preview Assets.xcassets */; };
+		BBBDDA132B76905A00C2E59D /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBBDDA122B76905A00C2E59D /* PythonKit */; };
+		BBBF99442B77E4EC008AA17A /* AlertSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF99432B77E4EC008AA17A /* AlertSettingsView.swift */; };
+		BBBF99462B77E654008AA17A /* GlucoseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF99452B77E654008AA17A /* GlucoseChartView.swift */; };
+		BBBF99482B77EA97008AA17A /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF99472B77EA97008AA17A /* MenuBarView.swift */; };
+		BBBF994A2B77F1FE008AA17A /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBF99492B77F1FE008AA17A /* credentials.json */; };
+		BBBF994E2B77F620008AA17A /* credentials_template.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBF994D2B77F620008AA17A /* credentials_template.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB0026D62B76F6930087C2B7 /* GlucoseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseModel.swift; sourceTree = "<group>"; };
+		BBBDD9FB2B767C5100C2E59D /* dexcomMacDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dexcomMacDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBDD9FE2B767C5100C2E59D /* dexcomMacDisplayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dexcomMacDisplayApp.swift; sourceTree = "<group>"; };
+		BBBDDA002B767C5100C2E59D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBBDDA022B767C5300C2E59D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBBDDA052B767C5300C2E59D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BBBDDA072B767C5300C2E59D /* dexcomMacDisplay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dexcomMacDisplay.entitlements; sourceTree = "<group>"; };
+		BBBDDA0D2B767C7C00C2E59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBBDDA0E2B76889900C2E59D /* dexcom_fetch.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = dexcom_fetch.py; sourceTree = "<group>"; };
+		BBBF99432B77E4EC008AA17A /* AlertSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingsView.swift; sourceTree = "<group>"; };
+		BBBF99452B77E654008AA17A /* GlucoseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseChartView.swift; sourceTree = "<group>"; };
+		BBBF99472B77EA97008AA17A /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		BBBF99492B77F1FE008AA17A /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
+		BBBF994D2B77F620008AA17A /* credentials_template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = credentials_template.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBBDD9F82B767C5100C2E59D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBDDA132B76905A00C2E59D /* PythonKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBBDD9F22B767C5100C2E59D = {
+			isa = PBXGroup;
+			children = (
+				BBBDD9FD2B767C5100C2E59D /* dexcomMacDisplay */,
+				BBBDD9FC2B767C5100C2E59D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBBDD9FC2B767C5100C2E59D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBBDD9FB2B767C5100C2E59D /* dexcomMacDisplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBBDD9FD2B767C5100C2E59D /* dexcomMacDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				BBBDDA0D2B767C7C00C2E59D /* Info.plist */,
+				BBBDD9FE2B767C5100C2E59D /* dexcomMacDisplayApp.swift */,
+				BB0026D62B76F6930087C2B7 /* GlucoseModel.swift */,
+				BBBF99432B77E4EC008AA17A /* AlertSettingsView.swift */,
+				BBBDDA002B767C5100C2E59D /* ContentView.swift */,
+				BBBF99472B77EA97008AA17A /* MenuBarView.swift */,
+				BBBF99452B77E654008AA17A /* GlucoseChartView.swift */,
+				BBBDDA0E2B76889900C2E59D /* dexcom_fetch.py */,
+				BBBF99492B77F1FE008AA17A /* credentials.json */,
+				BBBF994D2B77F620008AA17A /* credentials_template.json */,
+				BBBDDA022B767C5300C2E59D /* Assets.xcassets */,
+				BBBDDA072B767C5300C2E59D /* dexcomMacDisplay.entitlements */,
+				BBBDDA042B767C5300C2E59D /* Preview Content */,
+			);
+			path = dexcomMacDisplay;
+			sourceTree = "<group>";
+		};
+		BBBDDA042B767C5300C2E59D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BBBDDA052B767C5300C2E59D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBBDD9FA2B767C5100C2E59D /* dexcomMacDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBBDDA0A2B767C5300C2E59D /* Build configuration list for PBXNativeTarget "dexcomMacDisplay" */;
+			buildPhases = (
+				BBBDD9F72B767C5100C2E59D /* Sources */,
+				BBBDD9F82B767C5100C2E59D /* Frameworks */,
+				BBBDD9F92B767C5100C2E59D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dexcomMacDisplay;
+			packageProductDependencies = (
+				BBBDDA122B76905A00C2E59D /* PythonKit */,
+			);
+			productName = dexcomMacDisplay;
+			productReference = BBBDD9FB2B767C5100C2E59D /* dexcomMacDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBBDD9F32B767C5100C2E59D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					BBBDD9FA2B767C5100C2E59D = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = BBBDD9F62B767C5100C2E59D /* Build configuration list for PBXProject "dexcomMacDisplay" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBBDD9F22B767C5100C2E59D;
+			packageReferences = (
+				BBBDDA112B76905A00C2E59D /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
+			productRefGroup = BBBDD9FC2B767C5100C2E59D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBBDD9FA2B767C5100C2E59D /* dexcomMacDisplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBBDD9F92B767C5100C2E59D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBF994A2B77F1FE008AA17A /* credentials.json in Resources */,
+				BBBDDA062B767C5300C2E59D /* Preview Assets.xcassets in Resources */,
+				BBBDDA032B767C5300C2E59D /* Assets.xcassets in Resources */,
+				BBBF994E2B77F620008AA17A /* credentials_template.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBBDD9F72B767C5100C2E59D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBDDA012B767C5100C2E59D /* ContentView.swift in Sources */,
+				BB0026D72B76F6930087C2B7 /* GlucoseModel.swift in Sources */,
+				BBBDD9FF2B767C5100C2E59D /* dexcomMacDisplayApp.swift in Sources */,
+				BBBF99482B77EA97008AA17A /* MenuBarView.swift in Sources */,
+				BBBF99442B77E4EC008AA17A /* AlertSettingsView.swift in Sources */,
+				BBBF99462B77E654008AA17A /* GlucoseChartView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BBBDDA082B767C5300C2E59D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBBDDA092B767C5300C2E59D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		BBBDDA0B2B767C5300C2E59D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dexcomMacDisplay/dexcomMacDisplay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"dexcomMacDisplay/Preview Content\"";
+				DEVELOPMENT_TEAM = UB96HSGRNN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dexcomMacDisplay/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hannah.dexcomMacDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BBBDDA0C2B767C5300C2E59D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dexcomMacDisplay/dexcomMacDisplay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"dexcomMacDisplay/Preview Content\"";
+				DEVELOPMENT_TEAM = UB96HSGRNN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dexcomMacDisplay/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hannah.dexcomMacDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBBDD9F62B767C5100C2E59D /* Build configuration list for PBXProject "dexcomMacDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBBDDA082B767C5300C2E59D /* Debug */,
+				BBBDDA092B767C5300C2E59D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBBDDA0A2B767C5300C2E59D /* Build configuration list for PBXNativeTarget "dexcomMacDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBBDDA0B2B767C5300C2E59D /* Debug */,
+				BBBDDA0C2B767C5300C2E59D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBBDDA112B76905A00C2E59D /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBBDDA122B76905A00C2E59D /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBBDDA112B76905A00C2E59D /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BBBDD9F32B767C5100C2E59D /* Project object */;
+}
