@@ -1,5 +1,5 @@
 # dexcomMacDisplay
-Below is the walkthrough to setup the project on your machine. 
+Below is the walkthrough to setup the macOS Dexcom display on your machine. 
 
 ## How to Install Python 3
 
