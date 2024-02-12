@@ -1,5 +1,5 @@
 # Ignore credentials file
-credentials.json
+dexcomMacDisplay/credentials.json
 
 # Ignore Python configuration file
 dexcomMacDisplay/PythonConfig.swift
