@@ -1,4 +1,6 @@
 # dexcomMacDisplay
+A macOS Dexcom display, with menu bar setup, graphical display of 3hrs of readings, and customizable high and low alerts.
+-----------------------
 Below is the walkthrough to setup the macOS Dexcom display on your machine. 
 
 ## Python 3
