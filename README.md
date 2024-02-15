@@ -90,5 +90,5 @@ Lastly, the badge on the app icon will also display high and low alerts if the c
 
 <p align="center">
   <img src="images/LowAlert%20-%20ZoomedIcon.png" height="200" alt="Low Alert Badge">
-  <img src="images/LowAlert%20-%20AppIcon.png" height="200" alt="App Icon in Dock">
+  <img src="images/LowAlert%20-%20AppIcon.png" height="300" alt="App Icon in Dock">
 </p>
