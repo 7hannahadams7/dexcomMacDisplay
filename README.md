@@ -1,6 +1,7 @@
 # dexcomMacDisplay 
 A macOS Dexcom display, with menu bar setup, graphical display of 3hrs of readings, and customizable high and low alerts.
-_______________
+
+-------
 
 # Feature Walkthrough
 When the app is running on your mac, the code automatically fetches data every 5 minutes to stay up to date with your Dexcom's status. 
@@ -37,7 +38,8 @@ Lastly, the badge on the app icon will also display high and low alerts if the c
   <img src="images/LowAlert%20-%20ZoomedIcon.png" height="200" alt="Low Alert Badge">
   <img src="images/LowAlert%20-%20AppIcon.png" height="300" alt="App Icon in Dock">
 </p>
-________
+
+-------
 
 # Setup
 Below is the walkthrough to setup the macOS Dexcom display on your machine. 
