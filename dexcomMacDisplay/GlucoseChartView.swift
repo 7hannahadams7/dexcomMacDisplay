@@ -23,13 +23,13 @@ struct GlucoseChartView: View {
         // Scale chart if value outside of bounds
         var chartMax: Int{
             if let maxReading = glucoseReadings.max(){
-                return max(maxReading, 200, highAlert)
+                return max(maxReading + 10, highAlert + 10, 200)
             }
             return 200
         }
         var chartMin: Int{
             if let minReading = glucoseReadings.min(){
-                return min(minReading, 50, lowAlert)
+                return min(minReading - 5, 50)
             }
             return 50
         }
@@ -45,7 +45,7 @@ struct GlucoseChartView: View {
                         yStart: .value("Reading", highAlert),
                         yEnd: .value("Reading", chartMax)
                     )
-                    .foregroundStyle(Color.yellow.opacity(0.2))
+                    .foregroundStyle(Color("HighAlert"))
                     
                     // Regular Fill
                     RectangleMark(
@@ -54,7 +54,7 @@ struct GlucoseChartView: View {
                         yStart: .value("Reading", lowAlert),
                         yEnd: .value("Reading", highAlert)
                     )
-                    .foregroundStyle(Color.gray.opacity(0.1))
+                    .foregroundStyle(Color("Shaded"))
                     
                     // Low Value - Solid Fill
                     RectangleMark(
@@ -63,7 +63,7 @@ struct GlucoseChartView: View {
                         yStart: .value("Reading", chartMin),
                         yEnd: .value("Reading", lowAlert)
                     )
-                    .foregroundStyle(Color.red.opacity(0.2))
+                    .foregroundStyle(Color("LowAlert"))
                     
                     // Points from array
                     ForEach(glucoseReadings.indices, id: \.self) { index in

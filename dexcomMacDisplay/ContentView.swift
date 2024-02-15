@@ -25,11 +25,11 @@ struct ContentView: View {
         // Set background color based on current value
         var backgroundColor: Color{
             if glucoseValue > highAlert{
-                return Color.yellow
+                return Color("HighAlert")
             }else if glucoseValue < lowAlert{
-                return Color.red
+                return Color("LowAlert")
             }else{
-                return Color.gray
+                return Color("Shaded")
             }
         }
         
@@ -58,7 +58,7 @@ struct ContentView: View {
                 
                 AlertSettingsView(glucoseModel:glucoseModel,highAlert:$highAlert,lowAlert:$lowAlert)
             }
-        }.frame(width: tabExpanded ? 400 : 250, height:tabExpanded ? 400 : 250).background(backgroundColor.opacity(0.3))
+        }.frame(width: tabExpanded ? 400 : 250, height:tabExpanded ? 400 : 250).background(backgroundColor)
     }
 }
 
