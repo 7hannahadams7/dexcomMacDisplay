@@ -12,7 +12,7 @@ The high and low alert boundaries are edited for the below images to trigger ale
 
 The current Dexcom reading and trend arrow displays in your menu bar, along with alerts for high and low values based on your specified bounds. 
 
-![Dexcom Alert in Menu Bar](images/LowAlert%20-%20MenuBar.png)
+![Dexcom Alert in Menu Bar](images/HighAlert%20-%20MenuBar.png)
 
 ## Graph View
 In the menu bar window, the current reading and trend is shown above your historical data. The graph can be collapsed or expanded, showing 1 hour and 3 hours of data. 
