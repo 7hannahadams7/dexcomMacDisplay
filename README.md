@@ -37,7 +37,8 @@ Lastly, the badge on the app icon will also display high and low alerts if the c
   <img src="images/LowAlert%20-%20ZoomedIcon.png" height="200" alt="Low Alert Badge">
   <img src="images/LowAlert%20-%20AppIcon.png" height="300" alt="App Icon in Dock">
 </p>
-_____ 
+________
+
 # Setup
 Below is the walkthrough to setup the macOS Dexcom display on your machine. 
 
