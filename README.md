@@ -1,4 +1,4 @@
-# dexcomMacDisplay
+# dexcomMacDisplay Setup
 A macOS Dexcom display, with menu bar setup, graphical display of 3hrs of readings, and customizable high and low alerts.
 _______________
 Below is the walkthrough to setup the macOS Dexcom display on your machine. 
@@ -59,3 +59,19 @@ To use this project, you'll need to set up your own Dexcom credentials. Follow t
 4. Now you're ready to run the project with your own credentials.
 
 **NOTE:** These credentials must be YOUR DEXCOM ACCOUNT credentials, not a follower of the account. See the pydexcom documentation for more information.
+
+# Feature Walkthrough
+When the app is running on your mac, the code automatically fetches data every 5 minutes to stay up to date with your Dexcom's status. 
+
+## Menu Bar Icon
+The current Dexcom reading and trend arrow displays in your menu bar, along with alerts for high and low values based on your specified bounds. 
+
+## Graph View
+In the menu bar window, the current reading and trend is shown above your historical data. The graph can be collapsed or expanded, showing 1 hour and 3 hours of data. 
+
+The top corner settings allow you to adjust your high and low alert settings and to force refresh the data before the timer. 
+
+The color of the window will also change color according to the current alert. 
+
+## App Badge
+Lastly, the badge on the app icon will also display high and low alerts if the current reading is outside of the specified bounds. 
