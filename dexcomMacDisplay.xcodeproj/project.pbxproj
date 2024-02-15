@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB0026D72B76F6930087C2B7 /* GlucoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0026D62B76F6930087C2B7 /* GlucoseModel.swift */; };
+		BB72FA922B7EA10F002B2E4C /* ButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72FA912B7EA10F002B2E4C /* ButtonStyling.swift */; };
 		BBBDD9FF2B767C5100C2E59D /* dexcomMacDisplayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBDD9FE2B767C5100C2E59D /* dexcomMacDisplayApp.swift */; };
 		BBBDDA012B767C5100C2E59D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBDDA002B767C5100C2E59D /* ContentView.swift */; };
 		BBBDDA032B767C5300C2E59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBBDDA022B767C5300C2E59D /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		BBBDDA132B76905A00C2E59D /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBBDDA122B76905A00C2E59D /* PythonKit */; };
 		BBBF99442B77E4EC008AA17A /* AlertSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF99432B77E4EC008AA17A /* AlertSettingsView.swift */; };
 		BBBF99462B77E654008AA17A /* GlucoseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF99452B77E654008AA17A /* GlucoseChartView.swift */; };
-		BBBF99482B77EA97008AA17A /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF99472B77EA97008AA17A /* MenuBarView.swift */; };
 		BBBF994A2B77F1FE008AA17A /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBF99492B77F1FE008AA17A /* credentials.json */; };
 		BBBF994E2B77F620008AA17A /* credentials_template.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBF994D2B77F620008AA17A /* credentials_template.json */; };
 		BBBF99502B7A7974008AA17A /* PythonConfigTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBF994F2B7A7974008AA17A /* PythonConfigTemplate.swift */; };
@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		BB0026D62B76F6930087C2B7 /* GlucoseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseModel.swift; sourceTree = "<group>"; };
+		BB72FA912B7EA10F002B2E4C /* ButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyling.swift; sourceTree = "<group>"; };
 		BBBDD9FB2B767C5100C2E59D /* dexcomMacDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dexcomMacDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBDD9FE2B767C5100C2E59D /* dexcomMacDisplayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dexcomMacDisplayApp.swift; sourceTree = "<group>"; };
 		BBBDDA002B767C5100C2E59D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		BBBDDA0E2B76889900C2E59D /* dexcom_fetch.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = dexcom_fetch.py; sourceTree = "<group>"; };
 		BBBF99432B77E4EC008AA17A /* AlertSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingsView.swift; sourceTree = "<group>"; };
 		BBBF99452B77E654008AA17A /* GlucoseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseChartView.swift; sourceTree = "<group>"; };
-		BBBF99472B77EA97008AA17A /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		BBBF99492B77F1FE008AA17A /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
 		BBBF994D2B77F620008AA17A /* credentials_template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = credentials_template.json; sourceTree = "<group>"; };
 		BBBF994F2B7A7974008AA17A /* PythonConfigTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonConfigTemplate.swift; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 				BBBF99512B7A798C008AA17A /* PythonConfig.swift */,
 				BB0026D62B76F6930087C2B7 /* GlucoseModel.swift */,
 				BBBF99432B77E4EC008AA17A /* AlertSettingsView.swift */,
+				BB72FA912B7EA10F002B2E4C /* ButtonStyling.swift */,
 				BBBDDA002B767C5100C2E59D /* ContentView.swift */,
-				BBBF99472B77EA97008AA17A /* MenuBarView.swift */,
 				BBBF99452B77E654008AA17A /* GlucoseChartView.swift */,
 				BBBDDA0E2B76889900C2E59D /* dexcom_fetch.py */,
 				BBBF99492B77F1FE008AA17A /* credentials.json */,
@@ -181,7 +181,7 @@
 				BBBDDA012B767C5100C2E59D /* ContentView.swift in Sources */,
 				BB0026D72B76F6930087C2B7 /* GlucoseModel.swift in Sources */,
 				BBBDD9FF2B767C5100C2E59D /* dexcomMacDisplayApp.swift in Sources */,
-				BBBF99482B77EA97008AA17A /* MenuBarView.swift in Sources */,
+				BB72FA922B7EA10F002B2E4C /* ButtonStyling.swift in Sources */,
 				BBBF99522B7A798C008AA17A /* PythonConfig.swift in Sources */,
 				BBBF99442B77E4EC008AA17A /* AlertSettingsView.swift in Sources */,
 				BBBF99462B77E654008AA17A /* GlucoseChartView.swift in Sources */,

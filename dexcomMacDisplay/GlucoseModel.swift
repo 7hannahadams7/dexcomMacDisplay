@@ -15,6 +15,7 @@ class GlucoseModel: ObservableObject {
     
     @Published var validLogin: Bool = true
 
+    // Pulling data from dexcom_fetch.py
     func fetchGlucoseData() {
         let process = Process()
         process.launchPath = PythonConfig.pythonPath
@@ -26,20 +27,23 @@ class GlucoseModel: ObservableObject {
         process.launch()
         process.waitUntilExit()
 
+        // Pulling printed data into readable elements
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         if let output = String(data: data, encoding: .utf8) {
             let components = output.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: " ")
+            
+            // Pulling current reading and trend arrow
             if components.count >= 2, let glucoseValue = Int(components[0]) {
                 self.glucoseValue = glucoseValue
                 self.trendArrow = components[1]
-                print(self.trendArrow)
             } else {
                 print("Invalid output format for current values from Python script.")
                 validLogin = false
                 self.glucoseValue = 0
-                self.trendArrow = ""
+                self.trendArrow = "→"
             }
 
+            // Pulling 3 hours of past readings
             if components.count >= 3 {
                 let readings = components[2..<components.count]
                 self.glucoseReadings = []
@@ -48,7 +52,6 @@ class GlucoseModel: ObservableObject {
                         self.glucoseReadings.append(value)
                     }
                 }
-                
                 // Generate time labels starting from current time and going backward in 5-minute increments
                 let currentDate = Date()
                 let formatter = DateFormatter()

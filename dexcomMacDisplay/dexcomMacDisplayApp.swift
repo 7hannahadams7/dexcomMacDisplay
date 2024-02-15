@@ -14,14 +14,12 @@ struct DexcomMacDisplayApp: App {
     @AppStorage("lowAlert") var lowAlert: Int = 75
     
     var body: some Scene {
-//        WindowGroup {
-//            ContentView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert).frame(minWidth:200,minHeight:50)
-//        }
         MenuBarExtra{
             ContentView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert)
-//            MenuBarView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert)
         }label:{
+            // Menu Bar Label and Alert
             HStack{
+                // Alerts
                 if glucoseModel.glucoseValue > highAlert{
                     Image(systemName: "exclamationmark.triangle")
                 }else if glucoseModel.glucoseValue < lowAlert{
@@ -31,18 +29,19 @@ struct DexcomMacDisplayApp: App {
             }.onAppear{
                 // Initial data fetch on app launch
                 glucoseModel.fetchGlucoseData()
-                // Set up a timer to refresh every 5 minutes
+                // Set up a timer to refresh data every 5 minutes
                 Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { _ in
                     glucoseModel.fetchGlucoseData()
                 }
             }
         }.menuBarExtraStyle(.window)
+        // Updates to badge with alerts, responds to new reading and change of alert bounds
         .onChange(of: glucoseModel.glucoseValue) { _, _ in
-            setBadge(value: glucoseModel.glucoseValue) // Update badge
+            setBadge(value: glucoseModel.glucoseValue)
         }.onChange(of: highAlert) { _, _ in
-            setBadge(value: glucoseModel.glucoseValue) // Update badge
+            setBadge(value: glucoseModel.glucoseValue)
         }.onChange(of: lowAlert) { _, _ in
-            setBadge(value: glucoseModel.glucoseValue) // Update badge
+            setBadge(value: glucoseModel.glucoseValue)
         }
     }
     

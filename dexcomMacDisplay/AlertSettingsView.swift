@@ -4,31 +4,7 @@
 //
 //  Created by Hannah Adams on 2/10/24.
 //
-
 import SwiftUI
-
-struct MenuButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(10)
-            .foregroundColor(.black)
-            .background(configuration.isPressed ? Color.gray.opacity(0.5) : Color.clear)
-        .cornerRadius(8)
-        .focusable(false)
-        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 2))
-    }
-}
-
-struct ClearButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(2)
-            .foregroundColor(.gray)
-            .background(configuration.isPressed ? Color.gray.opacity(0.5) : Color.clear)
-        .cornerRadius(8)
-        .focusable(false)
-    }
-}
 
 struct AlertSettingsView: View{
     @ObservedObject var glucoseModel: GlucoseModel
@@ -40,14 +16,18 @@ struct AlertSettingsView: View{
     var body: some View{
         
         VStack(alignment:.trailing,spacing:0){
+            // Menu Button
             Button{
                 menuExpanded.toggle()
             }label:{
                 Image(systemName: "line.3.horizontal").resizable().aspectRatio(contentMode: .fit).frame(width:15,height:15)
             }.buttonStyle(ClearButtonStyle()).focusable(false)
+            
             if menuExpanded{
                 VStack{
                     Text("Alert Settings")
+                    
+                    // High Alert
                     HStack{
                         Button{
                             // Decrease high alert, must stay 5 above low alert
@@ -67,6 +47,8 @@ struct AlertSettingsView: View{
                             Image(systemName: "plus.circle").resizable().aspectRatio(contentMode: .fit).frame(width:15,height:15)
                         }.buttonStyle(MenuButtonStyle())
                     }
+                    
+                    // Low Alert
                     HStack{
                         Button{
                             // Min low alert is 60
@@ -86,12 +68,16 @@ struct AlertSettingsView: View{
                             Image(systemName: "plus.circle").resizable().aspectRatio(contentMode: .fit).frame(width:15,height:15)
                         }.buttonStyle(MenuButtonStyle())
                     }
+                    
+                    // Refresh Button
                     Button("Refresh Data") {
                         glucoseModel.fetchGlucoseData()
                     }.padding(.top,5).buttonStyle(MenuButtonStyle())
+                    
                 }.padding().background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10.0)).shadow(radius: 5)
             }
-        }.padding().onAppear{
+        }.padding()
+            .onAppear{
             menuExpanded = false
         }
 

@@ -4,6 +4,9 @@ from pydexcom import Dexcom
 import os
 import json
 
+# Script for fetching dexcom data to display
+# Users credentials.json username and password for Dexcom login
+
 def fetch_dexcom_data(username, password):
     dexcom = Dexcom(username, password)
     glucose_reading = dexcom.get_current_glucose_reading()

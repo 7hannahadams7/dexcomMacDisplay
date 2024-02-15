@@ -15,6 +15,7 @@ struct GlucoseChartView: View {
     @Binding var fullSize: Bool
     
     var body: some View {
+        
         // Pull 3 hour data for full size, 1 hour data for smaller
         let glucoseReadings = fullSize ? glucoseModel.glucoseReadings :  Array(glucoseModel.glucoseReadings.prefix(12))
         let timeLabels = fullSize ? glucoseModel.timeLabels: Array(glucoseModel.timeLabels.prefix(12))
@@ -102,7 +103,7 @@ struct GlucoseChartView: View {
                     Button{
                         fullSize.toggle()
                     }label:{
-                        Image(systemName:fullSize ? "arrow.up.backward" : "arrow.down.forward").resizable().aspectRatio(contentMode: .fit).frame(width:15,height:15)
+                        Image(systemName:fullSize ? "arrow.up.backward" : "arrow.down.forward").resizable().aspectRatio(contentMode: .fit).frame(width:10,height:10)
                     }.buttonStyle(ClearButtonStyle()).focusable(false).padding(5)
             }
             .background(Color.white)
