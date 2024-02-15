@@ -24,9 +24,9 @@ In the menu bar window, the current reading and trend is shown above your histor
 The top corner settings allow you to adjust your high and low alert settings and to force refresh the data before the timer. The color of the window will also change color according to the current alert. 
 
 <p align="center">
-  <img src="images/Settings.png" height="300" alt="Settings">
   <img src="images/HighAlert%20-%20ColorChange.png" height="300" alt="Alert Window Color Change">
   <img src="images/LowAlert%20-%20ColorChange.png" height="300" alt="Alert Window Color Change">
+  <img src="images/Settings.png" height="300" alt="Settings">
 </p>
 
 Note the boundaries in the examples above that trigger the alerts.
