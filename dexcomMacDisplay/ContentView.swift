@@ -14,13 +14,13 @@ struct ContentView: View {
     @ObservedObject var glucoseModel: GlucoseModel
     @Binding var highAlert: Int
     @Binding var lowAlert: Int
+    
+    @State private var tabExpanded: Bool = false
 
     var body: some View {
         // Pull glucoseModel values
         let glucoseValue = glucoseModel.glucoseValue
         let trendArrow = glucoseModel.trendArrow
-        let glucoseReadings = glucoseModel.glucoseReadings
-        let timeLabels = glucoseModel.timeLabels
         
         // Set background color based on current value
         var backgroundColor: Color{
@@ -33,60 +33,32 @@ struct ContentView: View {
             }
         }
         
-        // Scale chart if value outside of bounds
-        var chartMax: Int{
-            if let maxReading = glucoseReadings.max(){
-                return max(maxReading, 200)
-            }
-            return 200
-        }
-        var chartMin: Int{
-            if let minReading = glucoseReadings.min(){
-                return min(minReading, 50)
-            }
-            return 50
-        }
-        
-        
         GeometryReader{geometry in
-            VStack {
-                if glucoseModel.validLogin{
-                    // Main Text
-                    HStack {
-                        Text("\(glucoseValue) mg/dL")
-                            .font(.title)
-                        Text(trendArrow)
-                            .font(.title)
-                    }
-                    .padding()
-                    
-                    
-                    if geometry.size.width > 200 && geometry.size.height > 200 {
-                        
-                        GlucoseChartView(glucoseModel: glucoseModel, highAlert: $highAlert, lowAlert: $lowAlert, fullSize: true)
-                        
-                        Button("Refresh") {
-                            glucoseModel.fetchGlucoseData()
-                        }
-                        .padding()
-                    }
-                }else{
-                    VStack{
+            ZStack(alignment:.topTrailing){
+                VStack {
+                    if glucoseModel.validLogin{
+                        // Main Text
+                        HStack{
+                            Spacer()
+                            VStack{
+                                HStack{
+                                    Text("\(glucoseValue) \(trendArrow)").font(.title)
+                                }
+                                Text("mg/dL").bold()
+                            }.padding()
+                            Spacer()
+                        }.padding(5).background(Color.white).clipShape(Circle()).padding(.top,10)
+                        GlucoseChartView(glucoseModel: glucoseModel, highAlert: $highAlert, lowAlert: $lowAlert, fullSize: $tabExpanded)
+                    }else{
                         Text("Invalid Inputs").bold()
                         Text("Check credentials.json and PythonConfig.swift inputs")
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                AlertSettingsView(glucoseModel:glucoseModel,highAlert:$highAlert,lowAlert:$lowAlert)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .onAppear {
-                // Initial data fetch on app launch
-                glucoseModel.fetchGlucoseData()
-                // Set up a timer to refresh every 5 minutes
-                Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { _ in
-                    glucoseModel.fetchGlucoseData()
-                }
-            }
-        }.background(backgroundColor.opacity(0.3))
+        }.frame(width: tabExpanded ? 400 : 250, height:tabExpanded ? 400 : 250).background(backgroundColor.opacity(0.3))
     }
 }
 

@@ -14,17 +14,12 @@ struct DexcomMacDisplayApp: App {
     @AppStorage("lowAlert") var lowAlert: Int = 75
     
     var body: some Scene {
-        WindowGroup {
-            ContentView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert).frame(minWidth:200,minHeight:50)
-        }.onChange(of: glucoseModel.glucoseValue) { _, _ in
-            setBadge(value: glucoseModel.glucoseValue) // Update badge
-        }.onChange(of: highAlert) { _, _ in
-            setBadge(value: glucoseModel.glucoseValue) // Update badge
-        }.onChange(of: lowAlert) { _, _ in
-            setBadge(value: glucoseModel.glucoseValue) // Update badge
-        }
+//        WindowGroup {
+//            ContentView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert).frame(minWidth:200,minHeight:50)
+//        }
         MenuBarExtra{
-            MenuBarView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert)
+            ContentView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert)
+//            MenuBarView(glucoseModel: glucoseModel, highAlert:$highAlert, lowAlert:$lowAlert)
         }label:{
             HStack{
                 if glucoseModel.glucoseValue > highAlert{
@@ -33,8 +28,22 @@ struct DexcomMacDisplayApp: App {
                     Image(systemName: "exclamationmark.triangle.fill")
                 }
                 Text("\(glucoseModel.glucoseValue) \(glucoseModel.trendArrow)")
+            }.onAppear{
+                // Initial data fetch on app launch
+                glucoseModel.fetchGlucoseData()
+                // Set up a timer to refresh every 5 minutes
+                Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { _ in
+                    glucoseModel.fetchGlucoseData()
+                }
             }
         }.menuBarExtraStyle(.window)
+        .onChange(of: glucoseModel.glucoseValue) { _, _ in
+            setBadge(value: glucoseModel.glucoseValue) // Update badge
+        }.onChange(of: highAlert) { _, _ in
+            setBadge(value: glucoseModel.glucoseValue) // Update badge
+        }.onChange(of: lowAlert) { _, _ in
+            setBadge(value: glucoseModel.glucoseValue) // Update badge
+        }
     }
     
     private func setBadge(value: Int){

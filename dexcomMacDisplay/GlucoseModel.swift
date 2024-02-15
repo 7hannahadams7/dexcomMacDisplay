@@ -9,7 +9,7 @@ import Foundation
 
 class GlucoseModel: ObservableObject {
     @Published var glucoseValue: Int = 0
-    @Published var trendArrow: String = ""
+    @Published var trendArrow: String = "→"
     @Published var glucoseReadings: [Int] = []
     @Published var timeLabels: [Date] = []
     
@@ -32,6 +32,7 @@ class GlucoseModel: ObservableObject {
             if components.count >= 2, let glucoseValue = Int(components[0]) {
                 self.glucoseValue = glucoseValue
                 self.trendArrow = components[1]
+                print(self.trendArrow)
             } else {
                 print("Invalid output format for current values from Python script.")
                 validLogin = false
