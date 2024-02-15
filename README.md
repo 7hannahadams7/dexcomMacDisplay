@@ -63,6 +63,7 @@ To use this project, you'll need to set up your own Dexcom credentials. Follow t
 
 # Feature Walkthrough
 When the app is running on your mac, the code automatically fetches data every 5 minutes to stay up to date with your Dexcom's status. 
+The high and low alert boundaries are edited for the below images to trigger alerts for example purposes. The behavior will appropriately follow your specified bounds. 
 
 ## Menu Bar Icon
 ![Dexcom Value in Menu Bar](images/Regular%20-%20MenuBar.png) 
@@ -78,12 +79,15 @@ In the menu bar window, the current reading and trend is shown above your histor
   <img src="images/TrendExample%20-%20Expanded.png" height="300" alt="Expanded Window">
 </p>
 
-The top corner settings allow you to adjust your high and low alert settings and to force refresh the data before the timer. The color of the window will also change color according to the current alert. In the below example, the low alert boundary is set at 105, making the low alert trigger and change the window color. 
+The top corner settings allow you to adjust your high and low alert settings and to force refresh the data before the timer. The color of the window will also change color according to the current alert. 
 
 <p align="center">
   <img src="images/Settings.png" height="300" alt="Settings">
-  <img src="images/ColorChange.png" height="300" alt="Alert Window Color Change">
+  <img src="images/HighAlert%20-%20ColorChange.png" height="300" alt="Alert Window Color Change">
+  <img src="images/LowAlert%20-%20ColorChange.png" height="300" alt="Alert Window Color Change">
 </p>
+
+Note the boundaries in the examples above that trigger the alerts.
 
 ## App Badge
 Lastly, the badge on the app icon will also display high and low alerts if the current reading is outside of the specified bounds. 
