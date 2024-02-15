@@ -74,20 +74,21 @@ The current Dexcom reading and trend arrow displays in your menu bar, along with
 ## Graph View
 In the menu bar window, the current reading and trend is shown above your historical data. The graph can be collapsed or expanded, showing 1 hour and 3 hours of data. 
 <p align="center">
-  <img src="images/TrendExample%20-%20Window.png" width="300" alt="Collapsed Window">
-  <img src="images/TrendExample%20-%20Expanded.png" width="300" alt="Expanded Window">
+  <img src="images/TrendExample%20-%20Window.png" height="300" alt="Collapsed Window">
+  <img src="images/TrendExample%20-%20Expanded.png" height="300" alt="Expanded Window">
 </p>
 
 The top corner settings allow you to adjust your high and low alert settings and to force refresh the data before the timer. The color of the window will also change color according to the current alert. In the below example, the low alert boundary is set at 105, making the low alert trigger and change the window color. 
 
 <p align="center">
-  <img src="images/Settings.png" width="300" alt="Settings">
-  <img src="images/ColorChange.png" width="300" alt="Alert Window Color Change">
+  <img src="images/Settings.png" height="300" alt="Settings">
+  <img src="images/ColorChange.png" height="300" alt="Alert Window Color Change">
 </p>
 
 ## App Badge
 Lastly, the badge on the app icon will also display high and low alerts if the current reading is outside of the specified bounds. 
 
 <p align="center">
-  <img src="images/HighAlert-AppIcon.png" height="300" alt="Settings">
+  <img src="images/LowAlert%20-%20ZoomedIcon.png" height="200" alt="Low Alert Badge">
+  <img src="images/LowAlert%20-%20AppIcon.png" height="200" alt="App Icon in Dock">
 </p>
