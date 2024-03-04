@@ -1,4 +1,7 @@
-# dexcomMacDisplay 
+<h1 align="left">
+  <img src="images/appIcon.png" height="50" alt="App Icon">&nbsp;
+  dexcomMacDisplay
+</h1>
 A macOS Dexcom display, with menu bar setup, graphical display of 3hrs of readings, and customizable high and low alerts.
 
 -------
@@ -30,14 +33,6 @@ The top corner settings allow you to adjust your high and low alert settings and
 </p>
 
 Note the boundaries in the examples above that trigger the alerts.
-
-## App Badge
-Lastly, the badge on the app icon will also display high and low alerts if the current reading is outside of the specified bounds. 
-
-<p align="center">
-  <img src="images/LowAlert%20-%20ZoomedIcon.png" height="250" alt="Low Alert Badge">
-  <img src="images/LowAlert%20-%20AppIcon.png" height="250" alt="App Icon in Dock">
-</p>
 
 -------
 
