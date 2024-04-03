@@ -1,8 +1,5 @@
-<h1 align="left">
-  <img src="images/appIcon.png" height="50" alt="App Icon">&nbsp;
-  dexcomMacDisplay
-</h1>
-A macOS Dexcom display, with menu bar setup, graphical display of 3hrs of readings, and customizable high and low alerts.
+
+![Portolio Display](images/dexcomMacDisplay.png) 
 
 -------
 
